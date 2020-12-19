@@ -7,17 +7,12 @@ Panels:
         - /Global Options1
         - /Status1
         - /Axes1
-        - /Path3
-        - /PoseWithCovariance1
-        - /Path5
-        - /Odometry2
-        - /Odometry3
         - /Odometry3/Shape1
-        - /Odometry4
         - /Odometry4/Shape1
-        - /Path6
+        - /Odometry5/Shape1
+        - /Grid1
       Splitter Ratio: 0.5
-    Tree Height: 457
+    Tree Height: 921
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -26,7 +21,7 @@ Panels:
       - /2D Nav Goal1
       - /Publish Point1
     Name: Tool Properties
-    Splitter Ratio: 0.5886790156364441
+    Splitter Ratio: 0.588679016
   - Class: rviz/Views
     Expanded:
       - /Current View1
@@ -42,8 +37,6 @@ Panels:
     namespace: firefly
     odometry_topic: odometry_sensor1/odometry
     planner_name: ""
-Preferences:
-  PromptSaveOnExit: true
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
@@ -57,7 +50,7 @@ Visualization Manager:
       Frame Convention: XYZ -> ENU
       Name: AerialMapDisplay
       Object URI: https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2FvbXVxaW5nIiwiYSI6ImNqc3BqcHdkeDB5M3k0YXA5ZXo0YzBlb3YifQ.tZFTxT5tejTvFMPRG_JM5g
-      Robot frame: base_link
+      Robot frame: world
       Topic: /gps/fix
       Value: true
       Zoom: 18
@@ -70,51 +63,12 @@ Visualization Manager:
       Value: true
     - Alpha: 1
       Class: rviz/Polygon
-      Color: 255; 85; 0
-      Enabled: false
-      Name: Polygon
-      Topic: /urbanplanner/targetpoly
-      Unreliable: false
-      Value: false
-    - Alpha: 1
-      Class: rviz/Polygon
       Color: 25; 255; 0
       Enabled: true
       Name: Polygon
       Topic: /urbanplanner/pathpoly
       Unreliable: false
       Value: true
-    - Alpha: 1
-      Buffer Length: 1000
-      Class: rviz/Path
-      Color: 255; 85; 0
-      Enabled: false
-      Head Diameter: 0.30000001192092896
-      Head Length: 0.20000000298023224
-      Length: 0.30000001192092896
-      Line Style: Lines
-      Line Width: 0.029999999329447746
-      Name: Path
-      Offset:
-        X: 0
-        Y: 0
-        Z: 0
-      Pose Color: 255; 85; 255
-      Pose Style: None
-      Radius: 0.029999999329447746
-      Shaft Diameter: 0.10000000149011612
-      Shaft Length: 0.10000000149011612
-      Topic: /urbanplanner/targetbody
-      Unreliable: false
-      Value: false
-    - Alpha: 1
-      Class: rviz/Polygon
-      Color: 255; 85; 0
-      Enabled: false
-      Name: Polygon
-      Topic: /urbanplanner/targettop
-      Unreliable: false
-      Value: false
     - Alpha: 1
       Class: rviz/Polygon
       Color: 25; 255; 0
@@ -128,11 +82,11 @@ Visualization Manager:
       Class: rviz/Path
       Color: 25; 255; 0
       Enabled: true
-      Head Diameter: 0.30000001192092896
-      Head Length: 0.20000000298023224
-      Length: 0.30000001192092896
+      Head Diameter: 0.300000012
+      Head Length: 0.200000003
+      Length: 0.300000012
       Line Style: Lines
-      Line Width: 0.029999999329447746
+      Line Width: 0.0299999993
       Name: Path
       Offset:
         X: 0
@@ -140,9 +94,9 @@ Visualization Manager:
         Z: 0
       Pose Color: 255; 85; 255
       Pose Style: None
-      Radius: 0.029999999329447746
-      Shaft Diameter: 0.10000000149011612
-      Shaft Length: 0.10000000149011612
+      Radius: 0.0299999993
+      Shaft Diameter: 0.100000001
+      Shaft Length: 0.100000001
       Topic: /urbanplanner/pathbody
       Unreliable: false
       Value: true
@@ -151,11 +105,11 @@ Visualization Manager:
       Class: rviz/Path
       Color: 255; 255; 0
       Enabled: true
-      Head Diameter: 0.30000001192092896
-      Head Length: 0.30000001192092896
-      Length: 0.30000001192092896
+      Head Diameter: 0.300000012
+      Head Length: 0.300000012
+      Length: 0.300000012
       Line Style: Lines
-      Line Width: 0.029999999329447746
+      Line Width: 0.0299999993
       Name: Path
       Offset:
         X: 0
@@ -163,15 +117,15 @@ Visualization Manager:
         Z: 0
       Pose Color: 255; 85; 255
       Pose Style: Arrows
-      Radius: 0.029999999329447746
-      Shaft Diameter: 0.10000000149011612
+      Radius: 0.0299999993
+      Shaft Diameter: 0.100000001
       Shaft Length: 0.5
       Topic: /urbanplanner/norminalFlightPath
       Unreliable: false
       Value: true
     - Alpha: 1
       Axes Length: 1
-      Axes Radius: 0.10000000149011612
+      Axes Radius: 0.100000001
       Class: rviz/PoseWithCovariance
       Color: 255; 25; 0
       Covariance:
@@ -184,7 +138,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Position:
-          Alpha: 0.30000001192092896
+          Alpha: 0.300000012
           Color: 204; 51; 204
           Scale: 1
           Value: true
@@ -204,9 +158,9 @@ Visualization Manager:
       Class: rviz/Path
       Color: 25; 255; 0
       Enabled: true
-      Head Diameter: 0.30000001192092896
-      Head Length: 0.20000000298023224
-      Length: 0.30000001192092896
+      Head Diameter: 0.300000012
+      Head Length: 0.200000003
+      Length: 0.300000012
       Line Style: Billboards
       Line Width: 1
       Name: Path
@@ -216,9 +170,9 @@ Visualization Manager:
         Z: 0
       Pose Color: 255; 85; 255
       Pose Style: None
-      Radius: 0.029999999329447746
-      Shaft Diameter: 0.10000000149011612
-      Shaft Length: 0.10000000149011612
+      Radius: 0.0299999993
+      Shaft Diameter: 0.100000001
+      Shaft Length: 0.100000001
       Topic: /urbanplanner/viewPyramid
       Unreliable: false
       Value: true
@@ -232,16 +186,16 @@ Visualization Manager:
       Value: true
     - Alpha: 1
       Arrow Length: 1
-      Axes Length: 0.30000001192092896
-      Axes Radius: 0.009999999776482582
+      Axes Length: 0.300000012
+      Axes Radius: 0.00999999978
       Class: rviz/PoseArray
       Color: 115; 210; 22
       Enabled: true
-      Head Length: 0.07000000029802322
-      Head Radius: 0.029999999329447746
+      Head Length: 0.0700000003
+      Head Radius: 0.0299999993
       Name: PoseArray
-      Shaft Length: 0.23000000417232513
-      Shaft Radius: 0.009999999776482582
+      Shaft Length: 0.230000004
+      Shaft Radius: 0.00999999978
       Shape: Arrow (Flat)
       Topic: /firefly/waypoint_list
       Unreliable: false
@@ -257,37 +211,7 @@ Visualization Manager:
         velocity: true
       Queue Size: 100
       Value: true
-    - Alpha: 1
-      Autocompute Intensity Bounds: true
-      Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
-        Value: true
-      Axis: Z
-      Channel Name: intensity
-      Class: rviz/PointCloud2
-      Color: 255; 255; 255
-      Color Transformer: RGB8
-      Decay Time: 0
-      Enabled: true
-      Invert Rainbow: false
-      Max Color: 255; 255; 255
-      Max Intensity: 4096
-      Min Color: 0; 0; 0
-      Min Intensity: 0
-      Name: PointCloud2
-      Position Transformer: XYZ
-      Queue Size: 10
-      Selectable: true
-      Size (Pixels): 3
-      Size (m): 0.009999999776482582
-      Style: Flat Squares
-      Topic: /firefly/vi_sensor/camera_depth/depth/points
-      Unreliable: false
-      Use Fixed Frame: true
-      Use rainbow: true
-      Value: true
-    - Angle Tolerance: 0.10000000149011612
+    - Angle Tolerance: 0.100000001
       Class: rviz/Odometry
       Covariance:
         Orientation:
@@ -299,7 +223,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Position:
-          Alpha: 0.30000001192092896
+          Alpha: 0.300000012
           Color: 204; 51; 204
           Scale: 1
           Value: true
@@ -307,16 +231,16 @@ Visualization Manager:
       Enabled: true
       Keep: 1
       Name: Odometry
-      Position Tolerance: 0.10000000149011612
+      Position Tolerance: 0.100000001
       Shape:
         Alpha: 1
         Axes Length: 1
-        Axes Radius: 0.10000000149011612
+        Axes Radius: 0.100000001
         Color: 255; 25; 0
-        Head Length: 0.30000001192092896
-        Head Radius: 0.10000000149011612
+        Head Length: 0.300000012
+        Head Radius: 0.100000001
         Shaft Length: 1
-        Shaft Radius: 0.05000000074505806
+        Shaft Radius: 0.0500000007
         Value: Axes
       Topic: /vins_estimator/odometry
       Unreliable: false
@@ -326,11 +250,11 @@ Visualization Manager:
       Class: rviz/Path
       Color: 255; 0; 0
       Enabled: true
-      Head Diameter: 0.30000001192092896
-      Head Length: 0.20000000298023224
-      Length: 0.30000001192092896
+      Head Diameter: 0.300000012
+      Head Length: 0.200000003
+      Length: 0.300000012
       Line Style: Lines
-      Line Width: 0.029999999329447746
+      Line Width: 0.0299999993
       Name: Path
       Offset:
         X: 0
@@ -338,25 +262,13 @@ Visualization Manager:
         Z: 0
       Pose Color: 255; 85; 255
       Pose Style: None
-      Radius: 0.029999999329447746
-      Shaft Diameter: 0.10000000149011612
-      Shaft Length: 0.10000000149011612
+      Radius: 0.0299999993
+      Shaft Diameter: 0.100000001
+      Shaft Length: 0.100000001
       Topic: /vins_estimator/path
       Unreliable: false
       Value: true
-    - Class: rviz/Image
-      Enabled: true
-      Image Topic: /right/image_raw
-      Max Value: 1
-      Median window: 5
-      Min Value: 0
-      Name: Image
-      Normalize Range: true
-      Queue Size: 2
-      Transport Hint: raw
-      Unreliable: false
-      Value: true
-    - Angle Tolerance: 0.10000000149011612
+    - Angle Tolerance: 0.100000001
       Class: rviz/Odometry
       Covariance:
         Orientation:
@@ -368,7 +280,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Position:
-          Alpha: 0.30000001192092896
+          Alpha: 0.300000012
           Color: 204; 51; 204
           Scale: 1
           Value: true
@@ -376,21 +288,21 @@ Visualization Manager:
       Enabled: true
       Keep: 4
       Name: Odometry
-      Position Tolerance: 0.10000000149011612
+      Position Tolerance: 0.100000001
       Shape:
         Alpha: 1
         Axes Length: 1
-        Axes Radius: 0.10000000149011612
+        Axes Radius: 0.100000001
         Color: 255; 25; 0
-        Head Length: 0.30000001192092896
-        Head Radius: 0.10000000149011612
+        Head Length: 0.300000012
+        Head Radius: 0.100000001
         Shaft Length: 1
-        Shaft Radius: 0.05000000074505806
+        Shaft Radius: 0.0500000007
         Value: Axes
       Topic: /firefly/ground_truth/odometry
       Unreliable: false
       Value: true
-    - Angle Tolerance: 0.10000000149011612
+    - Angle Tolerance: 0.100000001
       Class: rviz/Odometry
       Covariance:
         Orientation:
@@ -402,7 +314,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Position:
-          Alpha: 0.30000001192092896
+          Alpha: 0.300000012
           Color: 204; 51; 204
           Scale: 1
           Value: true
@@ -410,21 +322,21 @@ Visualization Manager:
       Enabled: true
       Keep: 1
       Name: Odometry
-      Position Tolerance: 9.999999747378752e-5
+      Position Tolerance: 9.99999975e-05
       Shape:
         Alpha: 1
         Axes Length: 10
-        Axes Radius: 1
+        Axes Radius: 0.100000001
         Color: 255; 25; 0
-        Head Length: 0.30000001192092896
-        Head Radius: 0.10000000149011612
+        Head Length: 0.300000012
+        Head Radius: 0.100000001
         Shaft Length: 1
-        Shaft Radius: 0.05000000074505806
+        Shaft Radius: 0.0500000007
         Value: Axes
       Topic: /NTU_internal/drone_feedback
       Unreliable: false
       Value: true
-    - Angle Tolerance: 0.10000000149011612
+    - Angle Tolerance: 0.100000001
       Class: rviz/Odometry
       Covariance:
         Orientation:
@@ -436,7 +348,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Position:
-          Alpha: 0.30000001192092896
+          Alpha: 0.300000012
           Color: 204; 51; 204
           Scale: 1
           Value: true
@@ -444,16 +356,16 @@ Visualization Manager:
       Enabled: true
       Keep: 1
       Name: Odometry
-      Position Tolerance: 0.10000000149011612
+      Position Tolerance: 0.100000001
       Shape:
         Alpha: 1
         Axes Length: 15
-        Axes Radius: 0.30000001192092896
+        Axes Radius: 0.300000012
         Color: 255; 25; 0
-        Head Length: 0.30000001192092896
-        Head Radius: 0.10000000149011612
+        Head Length: 0.300000012
+        Head Radius: 0.100000001
         Shaft Length: 1
-        Shaft Radius: 0.05000000074505806
+        Shaft Radius: 0.0500000007
         Value: Axes
       Topic: /vins_estimator/odometry
       Unreliable: false
@@ -463,11 +375,11 @@ Visualization Manager:
       Class: rviz/Path
       Color: 25; 255; 0
       Enabled: true
-      Head Diameter: 0.30000001192092896
-      Head Length: 0.20000000298023224
-      Length: 0.30000001192092896
+      Head Diameter: 0.300000012
+      Head Length: 0.200000003
+      Length: 0.300000012
       Line Style: Lines
-      Line Width: 0.029999999329447746
+      Line Width: 0.0299999993
       Name: Path
       Offset:
         X: 0
@@ -475,11 +387,63 @@ Visualization Manager:
         Z: 0
       Pose Color: 255; 85; 255
       Pose Style: Arrows
-      Radius: 0.029999999329447746
-      Shaft Diameter: 0.10000000149011612
-      Shaft Length: 0.10000000149011612
+      Radius: 0.0299999993
+      Shaft Diameter: 0.100000001
+      Shaft Length: 0.100000001
       Topic: /NTU_internal/path_in_local_ref
       Unreliable: false
+      Value: true
+    - Angle Tolerance: 0.100000001
+      Class: rviz/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.300000012
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
+      Enabled: true
+      Keep: 1
+      Name: Odometry
+      Position Tolerance: 0.100000001
+      Shape:
+        Alpha: 1
+        Axes Length: 15
+        Axes Radius: 0.800000012
+        Color: 255; 25; 0
+        Head Length: 0.300000012
+        Head Radius: 1
+        Shaft Length: 15
+        Shaft Radius: 0.0500000007
+        Value: Axes
+      Topic: /viral2_odometry/opt_odom
+      Unreliable: false
+      Value: true
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.0299999993
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 100
+      Reference Frame: local
       Value: true
   Enabled: true
   Global Options:
@@ -496,10 +460,7 @@ Visualization Manager:
     - Class: rviz/FocusCamera
     - Class: rviz/Measure
     - Class: rviz/SetInitialPose
-      Theta std deviation: 0.2617993950843811
       Topic: /initialpose
-      X std deviation: 0.5
-      Y std deviation: 0.5
     - Class: rviz/SetGoal
       Topic: /move_base_simple/goal
     - Class: rviz/PublishPoint
@@ -509,37 +470,35 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 71.52838897705078
+      Distance: 47.7913742
       Enable Stereo Rendering:
-        Stereo Eye Separation: 0.05999999865889549
+        Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 4.486001014709473
-        Y: 3.669908046722412
-        Z: -3.3096084594726562
+        X: 4.48600101
+        Y: 3.66990805
+        Z: -3.30960846
       Focal Shape Fixed Size: false
-      Focal Shape Size: 0.05000000074505806
+      Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
-      Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8447955846786499
+      Near Clip Distance: 0.00999999978
+      Pitch: 0.694797873
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.942646026611328
+      Yaw: 2.81265306
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1052
+  Height: 1056
   Hide Left Dock: false
   Hide Right Dock: true
-  Image:
-    collapsed: false
   PlanningPanel:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001c3000003c2fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d00000206000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001a0050006c0061006e006e0069006e006700500061006e0065006c00000001050000015d0000015400fffffffb0000000a0049006d0061006700650100000249000001b60000001600ffffff000000010000011100000216fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000002e00000216000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004bf0000004cfc0100000002fb0000000800540069006d00650000000000000004bf000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000005b7000003c200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001c3000003dafc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006100fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000003da000000d700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001a0050006c0061006e006e0069006e006700500061006e0065006c00000001050000015d0000007300fffffffb0000000a0049006d00610067006500000003570000008f0000000000000000000000010000011100000216fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000002e00000216000000ad00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004bf0000004cfc0100000002fb0000000800540069006d00650000000000000004bf0000030000fffffffb0000000800540069006d0065010000000000000450000000000000000000000576000003da00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -548,6 +507,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: true
-  Width: 1920
-  X: 1440
-  Y: 0
+  Width: 1855
+  X: 65
+  Y: 24
